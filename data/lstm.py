@@ -80,7 +80,7 @@ def predict_point_by_point(model, data):
     return predicted
 
 def predict_sequence_full(model, data, window_size):
-        curr_frame = data[0]
+    curr_frame = data[0]
     predicted = []
     for i in xrange(len(data)):
         predicted.append(model.predict(curr_frame[newaxis,:,:])[0,0])
